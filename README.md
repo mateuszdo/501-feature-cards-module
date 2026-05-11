@@ -35,7 +35,7 @@ The implementation aims to separate editable content from decorative presentatio
 Clone repository:
 
 ```bash
-git clone REPOSITORY_URL
+git clone https://github.com/mateuszdo/501-feature-cards-module.git
 ```
 
 Run locally:
