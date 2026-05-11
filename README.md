@@ -38,16 +38,15 @@ Clone repository:
 git clone https://github.com/mateuszdo/501-feature-cards-module.git
 ```
 
-Run locally:
+Live demo: https://501-feature-cards-module.netlify.app/
 
-```bash
-open index.html
-```
+To run locally it require CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN
 
 ## Reflection
 
 1. Decouple image from the text and recreate module using CSS and hardcoded markup.
 2. Move content into JSON file and swap hardcoded values by fetching them from JSON file.
-3. Netlify for continuus delpoyment from Github so every push is reflected immediately on the live URL
+3. Netlify for continuous delpoyment from GitHub so every push is reflected immediately on the live URL
 4. Setup Contentful CMS - 3 Content entries that will replace local JSON and allow full control without touching code
-5. Replace data fetch from local JSON to Contentful CMS using Netlify function and keep API credentials server side instead of exposing them in client-side JS
+5. Replace data fetch from local JSON to Contentful CMS using Netlify function and keep API credentials server-side instead of exposing them in client-side JS
+6. Contentful REST API returns linked assets in a separate includes.Asset array rather than inline on the entry — unlike the Contentful JS SDK which resolves this automatically. Solved by building an asset lookup map keyed by ID to resolve each card's image URL at render time.
