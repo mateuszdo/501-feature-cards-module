@@ -1,1 +1,33 @@
-console.log("501 Feature Cards Module");
+// Target feature cards container by ID
+const container = document.getElementById("featureCards");
+
+// Fetch cards data from JSON file
+async function loadCards() {
+  const response = await fetch("./data/cards.json");
+  const data = await response.json();
+  // Create array of card objects
+  const cards = [data.cardOne, data.cardTwo, data.cardThree];
+
+  cards.forEach((card) => {
+    // Create article element for each card
+    const article = document.createElement("article");
+    // Add card class
+    article.className = "feature-card";
+    // Generate card structure
+    article.innerHTML = `
+      <div class="feature-card__image-wrapper">
+        <img src="${card.image}" alt="${card.alt}"/>
+      </div>
+
+      <div class="feature-card__content">
+        <p class="feature-card__label">${card.label}</p>
+        <h3 class="feature-card__value">${card.value}</h3>
+        <p class="feature-card__text">${card.text}</p>
+      </div>
+    `;
+    // Append card to container
+    container.appendChild(article);
+  });
+}
+
+loadCards();

@@ -1,0 +1,23 @@
+{
+    "cardOne": {
+        "label": "More than",
+        "value": "6,000,000",
+        "text": "Delighted guests",
+        "image": "./assets/501-image-1.jpg",
+        "alt": "Clapping hands icon"
+    },
+    "cardTwo": {
+        "label": "Find us in",
+        "value": "45",
+        "text": "countries",
+        "image": "./assets/501-image-2.jpg",
+        "alt": "Globe icon"
+    },
+    "cardThree": {
+        "label": "Over",
+        "value": "501,000,000",
+        "text": "darts thrown",
+        "image": "./assets/501-image-3.jpg",
+        "alt": "Dart icon"
+    }
+}

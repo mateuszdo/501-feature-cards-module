@@ -45,3 +45,8 @@ open index.html
 ```
 
 ## Reflection
+
+1. Decouple image from the text and recreate module using CSS and hardcoded markup.
+2. Move content into JSON file and swap hardcoded values by fetching them from JSON file.
+3. Deploy to Netlify
+4. Setup Contentful CMS
