@@ -15,7 +15,7 @@ async function loadCards() {
     // Generate card structure
     article.innerHTML = `
       <div class="feature-card__image-wrapper">
-        <img src="${card.image}" alt="${card.alt}"/>
+        <img src="https:${card.image.fields.file.url}" alt="${card.alt}"/>
       </div>
 
       <div class="feature-card__content">
