@@ -1,14 +1,13 @@
 // Target feature cards container by ID
 const container = document.getElementById("featureCards");
 
-// Fetch cards data from JSON file
+// Fetch cards data from contentful cms
 async function loadCards() {
-  const response = await fetch("./data/cards.json");
+  const response = await fetch("/.netlify/functions/cards");
   const data = await response.json();
-  // Create array of card objects
-  const cards = [data.cardOne, data.cardTwo, data.cardThree];
-
-  cards.forEach((card) => {
+  // Contentful return items
+  data.items.forEach((item) => {
+    const card = item.fields;
     // Create article element for each card
     const article = document.createElement("article");
     // Add card class

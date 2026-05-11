@@ -48,5 +48,6 @@ open index.html
 
 1. Decouple image from the text and recreate module using CSS and hardcoded markup.
 2. Move content into JSON file and swap hardcoded values by fetching them from JSON file.
-3. Deploy to Netlify
-4. Setup Contentful CMS
+3. Netlify for continuus delpoyment from Github so every push is reflected immediately on the live URL
+4. Setup Contentful CMS - 3 Content entries that will replace local JSON and allow full control without touching code
+5. Replace data fetch from local JSON to Contentful CMS using Netlify function and keep API credentials server side instead of exposing them in client-side JS
